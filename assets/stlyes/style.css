@@ -3,6 +3,16 @@
 *::after {
   box-sizing: border-box;
 }
+:root {
+  --main-bg-color: rgba(67, 68, 68, 0.822);
+  --header-bg-color: rgba(86, 17, 136, 0.822);
+  --header-txt-color: whitesmoke;
+  --banner-bg-color: rgba(115, 7, 192, 0.822);
+  --card-bg-color: rgba(66, 28, 94, 0.822);
+  --card-txt-color:whitesmoke;
+  --card-border-color: rgb(1, 54, 1);
+  --card-glow-color: rgb(0, 255, 0); 
+}
 
 html,
 body,
@@ -13,8 +23,8 @@ body,
 }
 
 body {
-  font-family: sans-serif;
-  background-color: #f9fbfd;
+  font-family: 'Courier New', 'Courier Regular';
+  background-color: var(--main-bg-color);
 }
 
 .wrapper {
@@ -31,7 +41,7 @@ header {
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--banner-bg-color);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
@@ -117,6 +127,13 @@ button[disabled] {
   resize: none;
   overflow: hidden;
 }
+
+h1, h2 {
+
+  color: var(--card-txt-color);
+
+}
+
 
 @media (max-width: 690px) {
   .btn {
