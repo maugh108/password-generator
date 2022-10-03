@@ -24,8 +24,10 @@ function generatePassword() {
     alert("Por favor introduzca un número en el siguiente intento.");
     console.log("es un NaN :(");
     return;
-  } else if (length < 8 && length >= 128) {
+  } else if (length < 8 || length >= 128) {
     alert("Error: longitud debe ser mayor que 8 y menor que 128.");
+    console.log("menor que 8 o mayor que 128");
+    return;
   } else;
 
   optupplow = confirm ("¿Usar mayúsculas? Si presiona cancelar, sólo se usarán minúsculas.");
@@ -55,7 +57,7 @@ function generatePassword() {
   //  console.log(arrconcat);
   }
 
-  for (var i =0; i <= length; i++) {
+  for (var i =0; i <= length - 1; i++) {
 
     generatedarr[i] = arrconcat[ Math.floor(Math.random() * arrconcat.length)]
 
